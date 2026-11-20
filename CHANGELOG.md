@@ -7,6 +7,14 @@ follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html) once it reache
 
 ## [Unreleased]
 
+### Added — onboarding exporter framework ([#639](https://github.com/corridor-in-a-box/corridor-in-a-box/issues/639))
+
+- `@corridor/adapter-kit` exports a minimal `BusinessProfile`, the `OnboardingExporter`
+  interface and `createExporterRegistry()`, which rejects malformed and duplicate ids. An
+  exporter maps the profile onto one receiver's own onboarding form.
+  `examples/onboarding/example-receiver-exporter.ts` is a reference exporter, and
+  `docs/onboarding-exporters.md` explains how to add one.
+
 ### Fixed — stale documentation and comments
 
 - Docs said no transition enters `refund_pending` and that `refunded` is reachable only when
