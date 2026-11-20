@@ -42,6 +42,7 @@ pnpm lint               # eslint + prettier
 pnpm typecheck          # whole monorepo, one tsc pass
 pnpm test               # vitest: engine, manifest, money, sep31, stellar, …
 pnpm example            # run a payment end-to-end (mocked anchor + settle)
+pnpm example:plan-and-pay   # quote three mock anchors, rank them, pay the best one
 pnpm mock:anchor        # scriptable local SEP-1/10/12/31/38 anchor (stall, KYC reject, refund, …): the quickest full corridor
 pnpm cli plan corridors/reference.corridor.yaml   # offline pre-flight / liveness check
 CORRIDOR_SIGNER_SECRET=S… pnpm cli canary corridors/reference.corridor.yaml \
