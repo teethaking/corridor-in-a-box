@@ -76,14 +76,26 @@ export {
   RegistryRouteResolver,
   UnattestedAnchorError,
   asAttestationSource,
+  checkAttestation,
   isAttestedProtocol,
   isUnattestedDomainAllowed,
+  type AttestationCheck,
+  type AttestationRefusal,
   type AttestationSource,
   type AttestationSourceLike,
   type AttestedProtocol,
   type LegacyAttestationSource,
   type RegistryResolverOptions,
 } from "./registry-resolver";
+
+// Planner step: keep only candidates the registry can vouch for, with reasons
+// for the rest. Same rules as RegistryRouteResolver, via checkAttestation.
+export {
+  filterByEvidence,
+  type EvidenceCandidate,
+  type EvidenceFilterDeps,
+  type EvidenceFilterResult,
+} from "./evidence-filter";
 
 // Deploy-time injection: load a RouteResolver module named in config (e.g.
 // CORRIDOR_RESOLVER_MODULE) instead of editing code. The module below the
